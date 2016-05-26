@@ -13,7 +13,7 @@ password = '<TELNET_PASSWORD>'
 chat = {
 	1 : 'AIR DROP INCOMING!!',
 	2 : 'ZOMBIE ALERT!!',
-	3 : 'There is a moose loose in the building!',
+	3 : 'WATCH OUT... there is a WILD',
 	4 : 'LOOK DOWN... Someone gave you',
 }
 
@@ -45,7 +45,10 @@ if(len(sys.argv) > 3) :
 	
 if(len(sys.argv) > 4) :
 	item = cmdList[4].upper()
-	item = re.sub('^GUN', '', item)
+	if re.match('^GUN', item) :
+		item = re.sub('^GUN', '', item)
+	elif re.match('^ANIMAL', item):
+		item = re.sub('^ANIMAL', '', item)
 	
 #Remove the first and second element as it is not needed past here
 cmdList.pop(0)
@@ -72,7 +75,7 @@ if whatToSay == 1 :
 elif whatToSay == 2 :
 	tn.write('say " ' + user + ' ' + chat[2] + '" \n')
 elif whatToSay == 3 :
-	tn.write('say " ' + chat[3] + '" \n')
+	tn.write('say " ' + user + ' ' + chat[3] + ' ' + item + ' around you!" \n')
 elif whatToSay == 4 :
 	if item == "WOOD" :
 		tn.write('say " ' + user + ' ' + chat[4] + ' some ' + item + '!" \n')
