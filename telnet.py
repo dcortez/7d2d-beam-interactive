@@ -14,7 +14,7 @@ chat = {
 	1 : 'AIR DROP INCOMING!!',
 	2 : 'ZOMBIE ALERT!!',
 	3 : 'There is a moose loose in the building!',
-	4 : 'LOOK DOWN IDIOT... Someone gave you a gift!',
+	4 : 'LOOK DOWN... Someone gave you',
 }
 
 #Test if args supplied
@@ -35,12 +35,17 @@ for x in sys.argv:
 #Store arg for chat logic
 whatToSay = int(cmdList[1])
 
-#Placeholder for user
+#Placeholders
 user = ''
+item = ''
 
 #Check if we have a user in args
 if(len(sys.argv) > 3) :
 	user = cmdList[3].upper()
+	
+if(len(sys.argv) > 4) :
+	item = cmdList[4].upper()
+	item = re.sub('^GUN', '', item)
 	
 #Remove the first and second element as it is not needed past here
 cmdList.pop(0)
@@ -69,7 +74,10 @@ elif whatToSay == 2 :
 elif whatToSay == 3 :
 	tn.write('say " ' + chat[3] + '" \n')
 elif whatToSay == 4 :
-	tn.write('say " ' + user + ' ' + chat[4] + '" \n')
+	if item == "WOOD" :
+		tn.write('say " ' + user + ' ' + chat[4] + ' some ' + item + '!" \n')
+	else :
+		tn.write('say " ' + user + ' ' + chat[4] + ' a ' + item + '!" \n')
 else :
 	print 'OOPS!!'
 	sys.exit()
