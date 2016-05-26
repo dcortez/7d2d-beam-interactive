@@ -17,6 +17,7 @@ chat = {
 	4 : 'LOOK DOWN... Someone gave you',
 }
 
+#List of words to filter out for prettier wording
 itemList = ['GUN', 'ANIMAL']
 
 #Test if args supplied
@@ -44,10 +45,12 @@ item = ''
 #Check if we have a user in args
 if(len(sys.argv) > 3) :
 	user = cmdList[3].upper()
-	
+
+#checks to see if we have enough args supplied for an item to be given	
 if(len(sys.argv) > 4) :
 	item = cmdList[4].upper()
 	
+	#Search list and remove ugly words
 	for a in itemList :
 		if re.match('^'+a+'', item) :
 			item = re.sub('^'+a+'', '', item)
