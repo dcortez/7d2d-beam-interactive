@@ -17,6 +17,8 @@ chat = {
 	4 : 'LOOK DOWN... Someone gave you',
 }
 
+itemList = ['GUN', 'ANIMAL']
+
 #Test if args supplied
 if __name__ == "__main__":
      
@@ -45,10 +47,10 @@ if(len(sys.argv) > 3) :
 	
 if(len(sys.argv) > 4) :
 	item = cmdList[4].upper()
-	if re.match('^GUN', item) :
-		item = re.sub('^GUN', '', item)
-	elif re.match('^ANIMAL', item):
-		item = re.sub('^ANIMAL', '', item)
+	
+	for a in itemList :
+		if re.match('^'+a+'', item) :
+			item = re.sub('^'+a+'', '', item)
 	
 #Remove the first and second element as it is not needed past here
 cmdList.pop(0)
