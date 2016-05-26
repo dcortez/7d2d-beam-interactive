@@ -1,4 +1,4 @@
-import telnetlib, sys
+import telnetlib, sys, re
 
 #Games server info     
 host = '<IP/HOST_NAME>'
