@@ -1,5 +1,5 @@
 THIS IS A LIST OF UPCOMING FEATURES TO BE IMPLEMENTED IN THE NEXT RELEASE
 
-1). Add Buffs and debuff to interactions
+1). Add Buffs and Debuff to interactions
 
 ------- FULL PYTHON BUILD --------
