@@ -65,8 +65,7 @@ var friends = [
 	'animalRabbit',
 	'animalChicken',
 	'animalStag',
-	'animalPig',
-	'animalBear'
+	'animalPig'
 ];
 
 //START EXECUTING
