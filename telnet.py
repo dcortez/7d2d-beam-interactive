@@ -1,4 +1,4 @@
-import telnetlib, sys, re
+import telnetlib, sys, re, time
 
 #Games server info     
 host = '<IP/HOST_NAME>'
@@ -18,7 +18,7 @@ chat = {
 }
 
 #List of words to filter out for prettier wording
-itemList = ['GUN', 'ANIMAL']
+itemList = ['GUN', 'ANIMAL', 'spawnwanderinghorde']
 
 #Test if args supplied
 if __name__ == "__main__":
@@ -40,7 +40,7 @@ whatToSay = int(cmdList[1])
 
 #Placeholders
 user = ''
-item = ''
+item = cmdList[2]
 
 #Check if we have a user in args
 if(len(sys.argv) > 3) :
@@ -78,7 +78,11 @@ tn.write(password + '\n')
 if whatToSay == 1 :
 	tn.write('say " ' + chat[1] + '" \n')
 elif whatToSay == 2 :
-	tn.write('say " ' + user + ' ' + chat[2] + '" \n')
+	if item == 'spawnwanderinghorde' :
+		tn.write('say "WANDERING HORDE INCOMING" \n')
+	else :	
+		tn.write('say " ' + user + ' ' + chat[2] + '" \n')
+		time.sleep(10)
 elif whatToSay == 3 :
 	tn.write('say " ' + user + ' ' + chat[3] + ' ' + item + ' around you!" \n')
 elif whatToSay == 4 :
