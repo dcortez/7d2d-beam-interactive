@@ -14,16 +14,18 @@ chat = {
 }
 
 #List of words to filter out for prettier wording
-itemList = ['GUN', 'ANIMAL']
-
+itemList = [
+	'gun', 
+	'animal',
+	'zombie'
+]
+ 
 ########################################################################
 ######################## NO EDIT PAST THIS LINE ######################## 
 ########################################################################
 
 #Test if args supplied
-if __name__ == "__main__":
-     
-    if(len(sys.argv) < 2) :
+if(len(sys.argv) < 2) :
         print 'ERROR: No args supplied'
         sys.exit()
         
@@ -52,8 +54,10 @@ if(len(sys.argv) > 4) :
 	
 	#Search list and remove ugly words
 	for a in itemList :
-		if re.match('^'+a+'', item) :
-			item = re.sub('^'+a+'', '', item)
+		if re.match('^'+a+'', item, flags=re.IGNORECASE) :
+			if a == 'zombie' :
+				item = re.sub('^'+a+'',' '+a.upper()+' ', item, flags=re.IGNORECASE)
+			item = re.sub('^'+a+'', '', item, flags=re.IGNORECASE)
 	
 #Remove the first and second element as it is not needed past here
 cmdList.pop(0)
@@ -81,7 +85,7 @@ elif whatToSay == 2 :
 	if item == 'spawnwanderinghorde' :
 		tn.write('say "WANDERING HORDE INCOMING" \n')
 	else :	
-		tn.write('say " ' + user + ' ' + chat[2] + '" \n')
+		tn.write('say " ' + user + item + chat[2] + '" \n')
 		time.sleep(10)
 elif whatToSay == 3 :
 	tn.write('say " ' + user + ' ' + chat[3] + ' ' + item + ' around you!" \n')
