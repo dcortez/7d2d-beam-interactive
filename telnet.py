@@ -18,7 +18,7 @@ chat = {
 }
 
 #List of words to filter out for prettier wording
-itemList = ['GUN', 'ANIMAL', 'spawnwanderinghorde']
+itemList = ['GUN', 'ANIMAL']
 
 #Test if args supplied
 if __name__ == "__main__":
