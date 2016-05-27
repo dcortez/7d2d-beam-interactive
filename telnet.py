@@ -12,7 +12,7 @@ password = '<TELNET_PASSWORD>'
 #Chat Dictionary
 chat = {
 	1 : 'AIR DROP INCOMING!!',
-	2 : 'ZOMBIE ALERT!!',
+	2 : 'ZOMBIE SPAWNING IN 10!!',
 	3 : 'WATCH OUT... there is a WILD',
 	4 : 'LOOK DOWN... Someone gave you',
 }
