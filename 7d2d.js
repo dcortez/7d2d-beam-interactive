@@ -71,8 +71,8 @@ var friends = [
 //START EXECUTING
 var Beam = require('beam-client-node');
 var Tetris = require('beam-interactive-node');
-var rjs = require('robotjs');
 var pyShell = require('python-shell');
+var Random = require('random-js');
 
 var pyOptions = {
 	mode: 'text',
@@ -105,7 +105,9 @@ beam.use('password', {
 					
 					//Spawn Animal
 					if (report.tactile[i].pressFrequency > 0) {
-						var key = Math.floor(Math.random() * friends.length);
+						var random = new Random(Random.engines.mt19937().autoSeed());
+						var key = random.integer(0, (friends.length - 1));
+
 						pyOptions['args'] = [ 3, 'spawnentity', GAME_PLAYERID, friends[key] ];
 					}
 					
@@ -114,9 +116,11 @@ beam.use('password', {
 					//Spawn Evil
 				case 1:
 					if (report.tactile[i].pressFrequency > 0) {
-						var key = Math.floor(Math.random() * enemies.length);
-						
-						if ( oddOrEven(Math.random() * 11) == 'even' ) {
+						var random = new Random(Random.engines.mt19937().autoSeed());
+						var key = random.integer(0, (enemies.length));
+						var testing = random.integer(0,100);
+																	
+						if ( testing < 49 ) {
 							pyOptions['args'] = [ 2, 'spawnwanderinghorde' ];
 						}
 						
@@ -130,9 +134,11 @@ beam.use('password', {
 				
 					//Give Item(s)
 					if (report.tactile[i].pressFrequency > 0) {
-						var key = Math.floor(Math.random() * items.length);
+						var random = new Random(Random.engines.mt19937().autoSeed());
+						var key = random.integer(0, (items.length));
+						var testing = random.integer(0,100);
 						
-						if ( oddOrEven(Math.random() * 11) == 'even' ) {
+						if ( testing > 49 ) {
 							pyOptions['args'] = [ 4, 'give', GAME_PLAYERID, items[key][0], items[key][1] ];
 						}
 						else {
@@ -189,8 +195,3 @@ beam.use('password', {
 		
     });
 });
-
-//Some Helper Functions
-function oddOrEven(x) {
-  return ( x & 1 ) ? "odd" : "even";
-}
