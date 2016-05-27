@@ -8,18 +8,19 @@ password = '<TELNET_PASSWORD>'
 #Chat Dictionary
 chat = {
 	1 : 'AIR DROP INCOMING!!',
-	2 : 'ZOMBIE SPAWNING IN 10!!',
+	2 : ' SPAWNING IN 10!!',
 	3 : 'WATCH OUT... there is a WILD',
-	4 : 'LOOK DOWN... Someone gave you',
+	4 : 'LOOK DOWN... Someone gave you'
 }
 
 #List of words to filter out for prettier wording
 itemList = [
 	'gun', 
 	'animal',
-	'zombie'
+	'zombie',
+	'bear'
 ]
-
+ 
 ########################################################################
 ######################## NO EDIT PAST THIS LINE ######################## 
 ########################################################################
@@ -55,7 +56,7 @@ if(len(sys.argv) > 4) :
 	#Search list and remove ugly words
 	for a in itemList :
 		if re.match('^'+a+'', item, flags=re.IGNORECASE) :
-			if a == 'zombie' :
+			if a == 'zombie' or a == 'bear':
 				item = re.sub('^'+a+'',' '+a.upper()+' ', item, flags=re.IGNORECASE)
 			item = re.sub('^'+a+'', '', item, flags=re.IGNORECASE)
 	
