@@ -4,10 +4,6 @@ import telnetlib, sys, re, time
 host = '<IP/HOST_NAME>'
 port = <TELNET_PORT>
 password = '<TELNET_PASSWORD>'
- 
-########################################################################
-######################## NO EDIT PAST THIS LINE ######################## 
-########################################################################
 
 #Chat Dictionary
 chat = {
@@ -18,7 +14,11 @@ chat = {
 }
 
 #List of words to filter out for prettier wording
-itemList = ['GUN', 'ANIMAL', 'spawnwanderinghorde']
+itemList = ['GUN', 'ANIMAL']
+
+########################################################################
+######################## NO EDIT PAST THIS LINE ######################## 
+########################################################################
 
 #Test if args supplied
 if __name__ == "__main__":
