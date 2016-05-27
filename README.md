@@ -25,10 +25,15 @@ NODE INSTALL REQUIREMENTS
   
   
 NODE DEPENDENCIES
+  
   npm -g install beam-client-node beam-interactive-node python-shell random-js
   
 After install - from command line:
+
   cd <7d2d-DIR LOCATION>
+
   node 7dtd.js
   
+
+
 Enjoy!!!!!!!11
