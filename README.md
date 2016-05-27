@@ -9,9 +9,6 @@ Basic design is as follows:
     -- Actions include: spawn airdrop, debuffplayer, givequest, and more
   - 7d2d.js receives input and passes appropriate action to telnet.py (Python telnet script)
   - telnet.py connects to 7DaysToDie_Dedicated_Server telnet and sends command based on action passed.
-  - ???
-  - Profit?
-
 
 NODE INSTALL REQUIREMENTS
 
