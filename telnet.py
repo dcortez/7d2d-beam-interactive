@@ -14,7 +14,11 @@ chat = {
 }
 
 #List of words to filter out for prettier wording
-itemList = ['GUN', 'ANIMAL']
+itemList = [
+	'gun', 
+	'animal',
+	'zombie'
+]
 
 ########################################################################
 ######################## NO EDIT PAST THIS LINE ######################## 
