@@ -16,9 +16,13 @@ Basic design is as follows:
 NODE INSTALL REQUIREMENTS
 
   nodejs
+  
   python2.7
+  
   node-gyp  ( Follow the guide: https://github.com/nodejs/node-gyp#installation )
+  
   npm
+  
   
 NODE DEPENDENCIES
   npm -g install beam-client-node beam-interactive-node python-shell random-js
