@@ -6,14 +6,18 @@ from random import random
 import json
 
 path = "https://beam.pro/api/v1"
-game_version = 419
+game_version = GAME_VERSIONID
 share_code = "SHARECODE"
 
 # Create a second object like this for the credentials of the second player
 Player = {
-    "username": "AtomicYetiGaming",
-    "password": "T062978t%%"
+    "username": "<USERNAME>",
+    "password": "<PASSWORD>"
 }
+
+########################################################################################
+#############################   NO EDIT BELOW THIS LINE   ##############################
+########################################################################################
 
 loop = asyncio.get_event_loop()
 
