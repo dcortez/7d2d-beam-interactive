@@ -6,15 +6,55 @@ from beam_interactive import proto
 from random import random
 import json
 
+#Beam Interactive Login
 path = "https://beam.pro/api/v1"
 game_version = GAME_VERSION_ID
 share_code = "SHARECODE"
-
-# Create a second object like this for the credentials of the second player
 Player = {
     "username": "USERNAME",
     "password": "PASSWORD"
 }
+
+#7 Days to Die Player Name
+GAME_PLAYERID = '<7Days_Playername>'
+
+#Spawn Lists
+items = [
+	['gunPistol', 1],
+	['gunPumpShotgun', 1],
+	['gunSawedOffPumpShotgun', 1],
+	['gunAK47', 1],
+	['gun44Magnum', 1],
+	['gunHuntingRifle', 1],
+	['gunSniperRifle', 1],
+	['nailgun', 1],
+	['shotgunShell', 20],
+	['shotgunSlug', 20],
+	['10mmBullet', 20],
+	['9mmBullet', 20],
+	['762mmBullet', 20],
+	['44MagBullet', 20],
+	['miningHelmet', 1]
+]
+
+enemies = [
+	'zombieSteve',
+	'zombieBoe',
+	'zombieMoe',
+	'zombieJoe',
+	'zombieArlene',
+	'zombieDarlene',
+	'zombieMarlene',
+	'zombieSteveCrawler',
+	'animalBear'
+]
+
+friends = [
+	'animalRabbit',
+	'animalChicken',
+	'animalStag',
+	'animalPig'
+]
 
 ###################################################################################
 ###########################   NO EDIT BELOW THIS LINE   ###########################
