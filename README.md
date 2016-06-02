@@ -5,7 +5,7 @@
     * Unzip the files into an easy to remember location
 
 2. open cmd(windows) or terminal(linux/unix)
-    * Run setup.py script
+    * Run setup.py script _(from the files you just downloaded)_
         * py -3 setup.py install (windows)
         * python3 setup.py install (linux/unix)
     * pip3 install requests (window/linux/unix)
