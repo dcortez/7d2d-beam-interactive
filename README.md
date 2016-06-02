@@ -13,7 +13,7 @@ _These instructions have been tested and work on Windows/Linux/mac_
   * Download the files and folders _(will download 7d2d-beam-interactive-python.zip)_
   * Unzip the files into an easy to remember location _(will create a folder called 7d2d-beam-interactive-python)_
   * Open the newly unzipped folder and copy telnet.py & interactive.py
-  * Plaste our files in the folder created in step 2 _(beam-interactive-python-master - you can change the folder name)_
+  * Paste our files in the folder created in step 2 _(beam-interactive-python-master - you can change the folder name)_
 
 4. Open cmd(windows) or terminal(linux/unix)
    * cd to the directory where you unziped the files in step 2.
