@@ -1,4 +1,5 @@
 # YOU MUST INSTALL PYTHON 3.3 or ABOVE
+https://www.python.org/downloads/
 
 1. Go to - https://github.com/WatchBeam/beam-interactive-python
     * Download all files and folders... 
