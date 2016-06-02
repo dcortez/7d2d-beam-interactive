@@ -4,7 +4,7 @@
     * Download all files and folders... 
     * Unzip the files into an easy to remember location
 
-2. open cmd(windows) or terminal(linux/unix)
+2. Open cmd(windows) or terminal(linux/unix)
     * Run setup.py script _(from the files you just downloaded)_
         * py -3 setup.py install _(windows)_
         * python3 setup.py install _(linux/unix)_
@@ -19,7 +19,8 @@
    * Change the info on line's 4 - 6
    * Save the changes
 
-5. Run the interactive script
-   * py -3 interactive.py _(windows)_
-   * python3 interactive.py _(linux/unix)_
+5. Open cmd(windows) or terminal(linux/unix)
+   * Run the interactive script
+      * py -3 interactive.py _(windows)_
+      * python3 interactive.py _(linux/unix)_
 
