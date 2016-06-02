@@ -10,6 +10,9 @@
         * python3 setup.py install (linux/unix)
     * pip3 install requests (window/linux/unix)
         * _If if it warns about pip being outdated update it_
+
+3. Open the interactive.py script
+   * Change the info on line's 6 - 16
     * run the interactive script
         * py -3 interactive.py (windows)
         * python3 interactive.py (linux/unix)
