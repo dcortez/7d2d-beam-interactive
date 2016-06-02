@@ -16,7 +16,7 @@
    * Save the changes
 
 4. Open the telnet.py script
-   * Change the info on line's 6 - 16
+   * Change the info on line's 4 - 6
    * Save the changes
 
 5. Run the interactive script
