@@ -1,5 +1,6 @@
 import asyncio
 import requests
+import os
 from beam_interactive import start
 from beam_interactive import proto
 from random import random
@@ -65,6 +66,7 @@ class Beam():
             #print(tactile)
             if tactile.pressFrequency > 0 and tactile.id == 0:
                 print('SPAWN RANDOM ANIMAL\n')
+                os.system('python /vhosts/interactive/r2d2/telnet.py 3 spawnentity AtomicYetiGaming animalChicken')
             elif tactile.pressFrequency > 0 and tactile.id == 1:
                 print('SPAWN RANDOM ENEMY\n')
             elif tactile.pressFrequency > 0 and tactile.id == 2:
@@ -125,3 +127,4 @@ except KeyboardInterrupt:
     print("Disconnected.")
 finally:
     loop.close()
+    
