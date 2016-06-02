@@ -8,10 +8,11 @@
     * Run setup.py script _(from the files you just downloaded)_
         * py -3 setup.py install _(windows)_
         * python3 setup.py install _(linux/unix)_
-    * pip3 install requests _(window/linux/unix)_
-        * _If if it warns about pip being outdated update it_
+    * Install requests module
+         * pip3 install requests _(window/linux/unix)_
+            * _If if it warns about pip being outdated update it_
 
-3. Open the interactive.py script
+3. Open the interactive.py script_(open with text editor of your choosing)_
    * Change the info on line's 6 - 16
    * Save the changes
 
