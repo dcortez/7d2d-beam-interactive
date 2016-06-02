@@ -1,5 +1,7 @@
 # YOU MUST INSTALL PYTHON 3.3 or ABOVE
 
+_These instructions have been tested and work on Windows/Linux/mac_
+
 1. Download and install Python 3.3 or above
    * Follow instructions at - https://www.python.org/downloads/
 
