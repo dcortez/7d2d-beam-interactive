@@ -6,14 +6,20 @@
 
 2. open cmd(windows) or terminal(linux/unix)
     * Run setup.py script _(from the files you just downloaded)_
-        * py -3 setup.py install (windows)
-        * python3 setup.py install (linux/unix)
-    * pip3 install requests (window/linux/unix)
+        * py -3 setup.py install _(windows)_
+        * python3 setup.py install _(linux/unix)_
+    * pip3 install requests _(window/linux/unix)_
         * _If if it warns about pip being outdated update it_
 
 3. Open the interactive.py script
    * Change the info on line's 6 - 16
-    * run the interactive script
-        * py -3 interactive.py (windows)
-        * python3 interactive.py (linux/unix)
+   * Save the changes
+
+4. Open the telnet.py script
+   * Change the info on line's 6 - 16
+   * Save the changes
+
+5. Run the interactive script
+   * py -3 interactive.py _(windows)_
+   * python3 interactive.py _(linux/unix)_
 
