@@ -12,7 +12,7 @@
          * pip3 install requests _(window/linux/unix)_
             * _If if it warns about pip being outdated update it_
 
-3. Open the interactive.py script_(open with text editor of your choosing)_
+3. Open the interactive.py script _(open with text editor of your choosing)_
    * Change the info on line's 6 - 16
    * Save the changes
 
