@@ -11,8 +11,11 @@ Player = {
     "password": "PASSWORD"
 }
 
-PYTHON_PATH = '<PATH_TO_PYTHON>'; // Path to Python.. can be python2.7 or above for this entry
-PYSCRIPT_PATH = '<PATH_TO_TELNET.PY>'; //Path to Python Telnet Script - USE "/" as seperator even on Windows
+#Path to Python.. can be python2.7 or above for this entry
+#PYTHON_PATH = '<PATH_TO_PYTHON>'; 
+
+#Path to Python Telnet Script - USE "/" as seperator even on Windows
+PYSCRIPT_PATH = '<PATH_TO_TELNET.PY>'; 
 
 #7 Days to Die Player Name
 GAME_PLAYERID = '<7Days_Playername>'
