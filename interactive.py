@@ -128,7 +128,7 @@ class Beam():
 				if num == 73:
 					os.system(('python {} 1 spawnairdrop').format(PYSCRIPT_PATH))
 				else:
-					os.system(('python {} 4 spawnentity {} {} {}').format(PYSCRIPT_PATH, GAME_PLAYERID, items[KEY][0], items[KEY][1]))
+					os.system(('python {} 4 give {} {} {}').format(PYSCRIPT_PATH, GAME_PLAYERID, items[KEY][0], items[KEY][1]))
 										
 			#Spawn Horde
 			elif tactile.pressFrequency > 0 and tactile.id == 3:
