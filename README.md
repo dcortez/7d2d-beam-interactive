@@ -1,4 +1,5 @@
-# YOU MUST INSTALL PYTHON 3.3 or ABOVE
+# 7 Days to Die - Beam Interactive (Python)
+## YOU MUST INSTALL PYTHON 3.3 or ABOVE
 
 _These instructions have been tested and work on Windows/Linux/mac_
 
