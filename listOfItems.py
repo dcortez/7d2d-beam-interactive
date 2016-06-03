@@ -1,5 +1,4 @@
-items = {
-	'melee':[
+items = {'melee':[
 		'clubMaster',
 		'clubWood',
 		'clubIron',
@@ -11,8 +10,8 @@ items = {
 		'femur',
 		'boneShiv',
 		'huntingKnife',
-		'machete'],
-	'weapons':[
+		'machete'
+	],'weapons':[
 		'gunPistol',
 		'gun44Magnum',
 		'gunSawedOffPumpShotgun',
@@ -24,8 +23,8 @@ items = {
 		'gunRocketLauncher',
 		'blunderbuss',
 		'woodenBow',
-		'crossbow'],
-	'tools':[
+		'crossbow'
+	],'tools':[
 		'stoneAxe',
 		'tazasStoneaxe',
 		'fireaxeIron',
@@ -40,8 +39,8 @@ items = {
 		'clawHammer',
 		'nailgun',
 		'chainsaw',
-		'auger'],
-	'ammunition':[
+		'auger'
+	],'ammunition':[
 		'9mmBullet',
 		'10mmBullet',
 		'44MagBullet',
@@ -58,14 +57,14 @@ items = {
 		'crossbowBolt',
 		'ironCrossbowBolt',
 		'steelCrossbowBolt',
-		'explodingCrossbowBolt'],
-	'explosives':[
+		'explodingCrossbowBolt'
+	],'explosives':[
 		'pipeBomb',
 		'dynamite',
 		'flare',
 		'rockSmall',
-		'turd'],
-	'parts:'[
+		'turd'
+	],'parts:'[
 		'partsMaster',
 		'partsPistol_grip',
 		'partsPistol_receiver',
@@ -111,8 +110,8 @@ items = {
 		'minibikeWheels',
 		'padlock',
 		'minibikeHandlebars',
-		'shoppingBasketItem'],
-	'armor':[
+		'shoppingBasketItem'
+	],'armor':[
 		'plantFiberPants',
 		'plantFiberShirt',
 		'plantFiberHood',
@@ -152,8 +151,8 @@ items = {
 		'hazmatPants',
 		'hazmatShirt',
 		'hazmatGloves',
-		'hazmatMask'],
-	'clothes':[
+		'hazmatMask'
+	],'clothes':[
 		'cowboyHat',
 		'blackCowboyHat',
 		'plantFiberHat',
@@ -217,8 +216,8 @@ items = {
 		'tshirtBrown',
 		'tshirtGreen',
 		'tshirtBlue',
-		'tshirtBlack'],
-	'health':[
+		'tshirtBlack'
+	],'health':[
 		'splint',
 		'aloeCream',
 		'bandage',
@@ -278,8 +277,8 @@ items = {
 		'redTea',
 		'coffee',
 		'beer',
-		'grainAlcohol'],
-	'books':[
+		'grainAlcohol'
+	],'books':[
 		'schematicMaster',
 		'invisibleRecipesForRepairCost',
 		'clubSpikedSchematic',
@@ -324,8 +323,8 @@ items = {
 		'ironChestArmorSchematic',
 		'ironLegArmorSchematic',
 		'ironBootsSchematic',
-		'ironGlovesSchematic'],
-	'quests':[
+		'ironGlovesSchematic'
+	],'quests':[
 		'questMaster',
 		'challengeQuestMaster',
 		'treasureQuestMaster',
@@ -352,8 +351,8 @@ items = {
 		'qt_jennifer',
 		'qt_claude',
 		'qt_sarah',
-		'qt_raphael'],
-	'misc':[
+		'qt_raphael'
+	],'misc':[
 		'yuccaFibers',
 		'wood',
 		'crushedSand',
@@ -433,5 +432,6 @@ items = {
 		'unit_lead',
 		'unit_glass',
 		'unit_stone',
-		'unit_clay']
+		'unit_clay'
+	]
 	}
