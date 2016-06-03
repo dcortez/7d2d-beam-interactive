@@ -433,5 +433,4 @@ items = {'melee':[
 		'unit_glass',
 		'unit_stone',
 		'unit_clay'
-	]
-	}
+	]}
