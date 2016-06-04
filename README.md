@@ -4,6 +4,12 @@
 
 ### CAVEATS
     NOTE: YOU MUST HAVE A DEDICATED SERVER WITH TELNET ENABLED, THIS WILL NOT CONNECT TO GAME CLIENT!
+        
+        you should have a serverconfig.xml file with the following lines:
+        <property name="TelnetPassword" value="<TELNET_PASSWORD>"/>
+        <property name="TelnetPort" value="<TELNET_PORT>"/>
+        <property name="TelnetEnabled" value="true"/>
+        
 
 _These instructions have been tested and work on Windows/Linux/mac_
 
