@@ -1,6 +1,10 @@
 # 7 Days to Die - Beam Interactive (Python)
 ## YOU MUST INSTALL PYTHON 3.3 or ABOVE
 
+
+### CAVEATS
+    #### NOTE: YOU MUST HAVE A DEDICATED SERVER WITH TELNET ENABLED, THIS WILL NOT CONNECT TO GAME CLIENT!
+
 _These instructions have been tested and work on Windows/Linux/mac_
 
 1. Download and install Python 3.3 or above
