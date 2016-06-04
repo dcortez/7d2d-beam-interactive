@@ -1,6 +1,8 @@
 # beam-interactive-7d2d
 Beam Interactive controls for 7 Days to Die
 
+# CAVEATS
+  NOTE: THIS ONLY WORKS ON A DEDICATED SERVER WITH TELNET RUNNING!
 
 This will be a working repo for our Interactive controls for a 7 Days to Die server.
 
