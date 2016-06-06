@@ -1,4 +1,4 @@
-items = {'melee':[
+items = {'melee': [
 		'clubMaster',
 		'clubWood',
 		'clubIron',
@@ -11,7 +11,7 @@ items = {'melee':[
 		'boneShiv',
 		'huntingKnife',
 		'machete'],
-	'weapons':[
+	'weapons': [
 		'gunPistol',
 		'gun44Magnum',
 		'gunSawedOffPumpShotgun',
@@ -24,7 +24,7 @@ items = {'melee':[
 		'blunderbuss',
 		'woodenBow',
 		'crossbow'],
-	'tools':[
+	'tools': [
 		'stoneAxe',
 		'tazasStoneaxe',
 		'fireaxeIron',
@@ -40,7 +40,7 @@ items = {'melee':[
 		'nailgun',
 		'chainsaw',
 		'auger'],
-	'ammunition':[
+	'ammunition': [
 		'9mmBullet',
 		'10mmBullet',
 		'44MagBullet',
@@ -58,13 +58,13 @@ items = {'melee':[
 		'ironCrossbowBolt',
 		'steelCrossbowBolt',
 		'explodingCrossbowBolt'],
-	'explosives':[
+	'explosives': [
 		'pipeBomb',
 		'dynamite',
 		'flare',
 		'rockSmall',
 		'turd'],
-	'parts':[
+	'parts': [
 		'partsMaster',
 		'partsPistol_grip',
 		'partsPistol_receiver',
@@ -111,7 +111,7 @@ items = {'melee':[
 		'padlock',
 		'minibikeHandlebars',
 		'shoppingBasketItem'],
-	'armor':[
+	'armor': [
 		'plantFiberPants',
 		'plantFiberShirt',
 		'plantFiberHood',
@@ -152,7 +152,7 @@ items = {'melee':[
 		'hazmatShirt',
 		'hazmatGloves',
 		'hazmatMask'],
-	'clothes':[
+	'clothes': [
 		'cowboyHat',
 		'blackCowboyHat',
 		'plantFiberHat',
@@ -217,7 +217,7 @@ items = {'melee':[
 		'tshirtGreen',
 		'tshirtBlue',
 		'tshirtBlack'],
-	'health':[
+	'health': [
 		'splint',
 		'aloeCream',
 		'bandage',
@@ -278,7 +278,7 @@ items = {'melee':[
 		'coffee',
 		'beer',
 		'grainAlcohol'],
-	'books':[
+	'books': [
 		'schematicMaster',
 		'invisibleRecipesForRepairCost',
 		'clubSpikedSchematic',
@@ -324,7 +324,7 @@ items = {'melee':[
 		'ironLegArmorSchematic',
 		'ironBootsSchematic',
 		'ironGlovesSchematic'],
-	'quests':[
+	'quests': [
 		'questMaster',
 		'challengeQuestMaster',
 		'treasureQuestMaster',
@@ -352,7 +352,7 @@ items = {'melee':[
 		'qt_claude',
 		'qt_sarah',
 		'qt_raphael'],
-	'misc':[
+	'misc': [
 		'yuccaFibers',
 		'wood',
 		'crushedSand',
