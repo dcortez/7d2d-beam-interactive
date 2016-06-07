@@ -43,101 +43,114 @@ class SampleApp(tk.Tk):
 		}
 		Player["username"] = self.beamPlayerUN.get()
 		Player['password'] = self.beamPlayerPW.get()
-		print(Player)
-
-app = SampleApp()
-app.mainloop()
 		
-# Beam Interactive Login
-path = "https://beam.pro/api/v1"
-Player = {
-	"username": '',
-	"password": ''
-}
-
-# Path to Python.. can be python2.7 or above for this entry
-# PYTHON_PATH = '<PATH_TO_PYTHON>'; 
-
-# Path to Python Telnet Script - USE "/" as seperator even on Windows
-PYSCRIPT_PATH = './telnet.py'
-
-# 7 Days to Die Player Name
-telnet = {
-	'GAME_PLAYERID': '',
-	'host': '',
-	'port': int(),
-	'password': ''
-}
-
-# Beam Interactive Info
-#ttk.Label(mainframe, text="BEAM INTERACTIVE LOGIN INFO:").grid(columnspan=3, row=1, sticky=W)
-
-#ttk.Label(mainframe, text="Beam Username").grid(column=2, row=2, sticky=W)
-#Player['username'] = ttk.Entry(mainframe, width=10, textvariable=Player["username"])
-#Player['username'].grid(column=1, row=2, sticky=(W, E))
-
-#ttk.Label(mainframe, text="Beam Password").grid(column=2, row=3, sticky=W)
-#Player['password'] = ttk.Entry(mainframe, width=10, textvariable=Player["password"])
-#Player['password'].grid(column=1, row=3, sticky=(W, E))
+		#print(Player)
+		test(Player)
+		
 
 
-# Game Server Info
-#ttk.Label(mainframe, text="GAME SERVER TELENT INFO:").grid(columnspan=3, row=6, sticky=W)
-
-#ttk.Label(mainframe, text="Server Address").grid(column=2, row=7, sticky=W)
-#serveraddress_entry = ttk.Entry(mainframe, width=10, textvariable=telnet['host'])
-#serveraddress_entry.grid(column=1, row=7, sticky=(W, E))
-
-#ttk.Label(mainframe, text="Server Port").grid(column=2, row=8, sticky=W)
-#serveraddress_entry = ttk.Entry(mainframe, width=10, textvariable=telnet['port'])
-#serveraddress_entry.grid(column=1, row=8, sticky=(W, E))
-
-#ttk.Label(mainframe, text="Server Password").grid(column=2, row=9, sticky=W)
-#serverpassword_entry = ttk.Entry(mainframe, width=10, textvariable=telnet['password'])
-#serverpassword_entry.grid(column=1, row=9, sticky=(W, E))
-
-# Game Server Info
-#ttk.Label(mainframe, text="PLAYER INFO:").grid(columnspan=3, row=10, sticky=W)
-
-#ttk.Label(mainframe, text="Player SteamID").grid(column=2, row=11, sticky=W)
-#playerid_entry = ttk.Entry(mainframe, width=10, textvariable=telnet['GAME_PLAYERID'])
-#playerid_entry.grid(column=1, row=11, sticky=(W, E))
-
-#ttk.Button(mainframe, text="Start Interactive", command= lambda: test(Player)).grid(columnspan=3, row=12, sticky=W)
-
-
-
-#for child in mainframe.winfo_children(): child.grid_configure(padx=5, pady=5)
-
-#Player['username'].focus()
-#root.bind('<Return>', lambda: test(Player))
-
-
-
-def on_button(self):
-	print(self.entry.get())
-	#Beam Interactive Login
+		
+	# Beam Interactive Login
 	path = "https://beam.pro/api/v1"
-	#game_version = 2745
-	#share_code = "noea3tpb"
-	Player = {}
-	Player['username'] = str(Player.get(*args[0]))
-	Player['password'] = str(Player.get(*args[0]))
-	print(str(*args))
+	Player = {
+		"username": '',
+		"password": ''
+	}
+
+	# Path to Python.. can be python2.7 or above for this entry
+	# PYTHON_PATH = '<PATH_TO_PYTHON>'; 
+
+	# Path to Python Telnet Script - USE "/" as seperator even on Windows
+	PYSCRIPT_PATH = './telnet.py'
+
+	# 7 Days to Die Player Name
+	telnet = {
+		'GAME_PLAYERID': '',
+		'host': '',
+		'port': int(),
+		'password': ''
+	}
+
+	# Beam Interactive Info
+	#ttk.Label(mainframe, text="BEAM INTERACTIVE LOGIN INFO:").grid(columnspan=3, row=1, sticky=W)
+
+	#ttk.Label(mainframe, text="Beam Username").grid(column=2, row=2, sticky=W)
+	#Player['username'] = ttk.Entry(mainframe, width=10, textvariable=Player["username"])
+	#Player['username'].grid(column=1, row=2, sticky=(W, E))
+
+	#ttk.Label(mainframe, text="Beam Password").grid(column=2, row=3, sticky=W)
+	#Player['password'] = ttk.Entry(mainframe, width=10, textvariable=Player["password"])
+	#Player['password'].grid(column=1, row=3, sticky=(W, E))
+
+
+	# Game Server Info
+	#ttk.Label(mainframe, text="GAME SERVER TELENT INFO:").grid(columnspan=3, row=6, sticky=W)
+
+	#ttk.Label(mainframe, text="Server Address").grid(column=2, row=7, sticky=W)
+	#serveraddress_entry = ttk.Entry(mainframe, width=10, textvariable=telnet['host'])
+	#serveraddress_entry.grid(column=1, row=7, sticky=(W, E))
+
+	#ttk.Label(mainframe, text="Server Port").grid(column=2, row=8, sticky=W)
+	#serveraddress_entry = ttk.Entry(mainframe, width=10, textvariable=telnet['port'])
+	#serveraddress_entry.grid(column=1, row=8, sticky=(W, E))
+
+	#ttk.Label(mainframe, text="Server Password").grid(column=2, row=9, sticky=W)
+	#serverpassword_entry = ttk.Entry(mainframe, width=10, textvariable=telnet['password'])
+	#serverpassword_entry.grid(column=1, row=9, sticky=(W, E))
+
+	# Game Server Info
+	#ttk.Label(mainframe, text="PLAYER INFO:").grid(columnspan=3, row=10, sticky=W)
+
+	#ttk.Label(mainframe, text="Player SteamID").grid(column=2, row=11, sticky=W)
+	#playerid_entry = ttk.Entry(mainframe, width=10, textvariable=telnet['GAME_PLAYERID'])
+	#playerid_entry.grid(column=1, row=11, sticky=(W, E))
+
+	#ttk.Button(mainframe, text="Start Interactive", command= lambda: test(Player)).grid(columnspan=3, row=12, sticky=W)
+
+
+
+	#for child in mainframe.winfo_children(): child.grid_configure(padx=5, pady=5)
+
+	#Player['username'].focus()
+	#root.bind('<Return>', lambda: test(Player))
+
+
+
+def test(self):
+	#print(self)
 	
+	Player = {
+		'username': '',
+		'password': ''
+	}
+	Player["username"] = self['username']
+	Player['password'] = self['password']
+	
+	print(Player)
+	
+	# Beam Interactive Login
+	path = "https://beam.pro/api/v1"
+
+	# 7 Days to Die Player Name
+	telnet = {
+		'GAME_PLAYERID': '',
+		'host': '',
+		'port': int(),
+		'password': ''
+	}
 	
 	#Path to Python.. can be python2.7 or above for this entry
 	#PYTHON_PATH = '<PATH_TO_PYTHON>'; 
 
 	#Path to Python Telnet Script - USE "/" as seperator even on Windows
-	#PYSCRIPT_PATH = './telnet.py'
+	PYSCRIPT_PATH = './telnet.py'
 
 	#7 Days to Die Player Name
-	#GAME_PLAYERID = 'AtomicYetiGaming'
+	GAME_PLAYERID = 'AtomicYetiGaming'
 
 	#test = random.randrange(0, len(listOfAllItems.items['melee']))
 
-	print(test)
+	#print(test)
 
 	#Spawn Lists
 	items = [
@@ -333,6 +346,6 @@ def on_button(self):
 		print("Disconnected.")
 	finally:
 		loop.close()
-#root.mainloop()
+	#root.mainloop()
 app = SampleApp()
 app.mainloop()
