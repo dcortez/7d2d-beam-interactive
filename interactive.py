@@ -1,4 +1,4 @@
-import asyncio, requests, os, random
+import asyncio, requests, os, random, listOfAllItems
 from beam_interactive import start
 from beam_interactive import proto
 
@@ -21,8 +21,11 @@ PYSCRIPT_PATH = '<PATH_TO_TELNET.PY>';
 #7 Days to Die Player Name
 GAME_PLAYERID = '<7Days_Playername>'
 
-# Spawn Lists
-# items = [ITEM, QUANTITY]
+test = random.randrange(0, len(listOfAllItems.items['melee']))
+
+print(test)
+
+#Spawn Lists
 items = [
 	['gunPistol', 1],
 	['gunPumpShotgun', 1],
@@ -60,7 +63,7 @@ friends = [
 	'animalPig'
 ]
 
-# Random range of numbers
+#Random range of numbers
 num = random.randrange(0, 100)
 
 ###################################################################################
@@ -210,7 +213,7 @@ player = Beam()
 
 try:
 	# Do a new line similar to this line but with objects for the new player
-	asyncio.ensure_future(player.connect(Player, "1"))
+	asyncio.async(player.connect(Player, "1"))
 	loop.run_forever()
 except KeyboardInterrupt:
 	print("Disconnected.")
