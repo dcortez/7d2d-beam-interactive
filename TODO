@@ -1,4 +1,4 @@
-# List of Things to do:
+#List of Things to do:
 
 1. Emplement GUI - (tkinter) for entering credentials and starting the interactive app.
 2. Emplement DB - (SQLLITE) to save GUI entries and items, enemies, animals...
