@@ -4,9 +4,6 @@ from beam_interactive import proto
 
 # Beam Interactive Login
 path = "https://beam.pro/api/v1"
-path = "https://beam.pro/api/v1"
-game_version = GAME_VERSION_ID
-share_code = "SHARECODE"
 Player = {
     "username": "USERNAME",
     "password": "PASSWORD"
