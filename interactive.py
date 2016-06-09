@@ -160,10 +160,10 @@ def test(streamer, steamid, server):
 
 				# Spawn Feral
 				elif tactile.pressFrequency > 0 and tactile.id == 4:
-					os.system('python {} 2 spawnentity {} zombieFeral'.format(PYSCRIPT_PATH, steamID))
+					os.system('python {} 2 spawnentity {} zombieFeral'.format(PYSCRIPT_PATH, steam))
 
 				elif tactile.pressFrequency > 0 and tactile.id == 5:
-					os.system('python {} 2 spawnentity {} zombieScreamer'.format(PYSCRIPT_PATH, steamID))
+					os.system('python {} 2 spawnentity {} zombieScreamer'.format(PYSCRIPT_PATH, steam))
 
 				# Spawn Airdrop
 				elif tactile.pressFrequency > 0 and tactile.id == 6:
