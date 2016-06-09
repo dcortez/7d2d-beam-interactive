@@ -1,4 +1,4 @@
-from PyQt4 import QtGui  # Import the PyQt4 module we'll need
+from PyQt4 import QtGui, QtCore  # Import the PyQt4 module we'll need
 import sys  # We need sys so that we can pass argv to QApplication
 
 import design  # This file holds our MainWindow and all design related things
@@ -17,8 +17,9 @@ class ExampleApp(QtGui.QMainWindow, design.Ui_MainWindow):
         self.setupUi(self)  # This is defined in design.py file automatically
         # It sets up layout and widgets that are defined
         self.setWindowTitle("7DTD Interactive")
+        self.setWindowIcon(QtGui.QIcon('icon.jpg'))
         self.startBtn.clicked.connect(self.browse_folder)  # When the button is pressed
-                                                            # Execute browse_folder function
+        self.stopBtn.clicked.connect(QtCore.QCoreApplication.instance().quit) # Execute browse_folder function
 
     def browse_folder(self):
         #self.listWidget.clear() # In case there are any existing elements in the list
