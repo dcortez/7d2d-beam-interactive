@@ -209,7 +209,7 @@ def test(streamer, steamid, server):
 
 	try:
 		# Do a new line similar to this line but with objects for the new player
-		asyncio.ensure_future(player.connect(streamer))
+		asyncio.async(player.connect(streamer))
 		loop.run_forever()
 	except KeyboardInterrupt:
 		print("Disconnected.")
