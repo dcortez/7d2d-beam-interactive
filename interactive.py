@@ -3,7 +3,6 @@ from tkinter import ttk
 import interactive
 import tkinter as tk
 import sqlite3
-from tkinter import Tk, Entry, END
 
 
 class InteractiveApp(tk.Tk):
@@ -13,14 +12,6 @@ class InteractiveApp(tk.Tk):
 		# Use this as a flag to indicate if the box was clicked.
 		global clicked
 		clicked = False
-
-		# Delete the contents of the Entry widget. Use the flag
-		# so that this only happens the first time.
-		#def callback(event):
-		#	global clicked
-		#	if clicked == False:
-		#		self.beamPlayerUN.delete(0, END)
-		#		clicked = True
 
 		root = self
 		root.title("7Dtd Beam Interactive")
