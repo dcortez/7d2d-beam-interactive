@@ -1,217 +1,198 @@
-import asyncio, requests, os, random
-from beam_interactive import start
-from beam_interactive import proto
+from tkinter import *
+from tkinter import ttk
+import interactive
+import tkinter as tk
+import sqlite3
+from tkinter import Tk, Entry, END
 
 
-def test(streamer, steamid, server):
+class InteractiveApp(tk.Tk):
+	def __init__(self):
+		tk.Tk.__init__(self)
 
-	# Beam Interactive Login
-	path = "https://beam.pro/api/v1"
-	streamer = streamer
-	server = server
+		# Use this as a flag to indicate if the box was clicked.
+		global clicked
+		clicked = False
 
-	# Path to Python.. can be python2.7 or above for this entry
-	# PYTHON_PATH = '<PATH_TO_PYTHON>';
+		# Delete the contents of the Entry widget. Use the flag
+		# so that this only happens the first time.
+		#def callback(event):
+		#	global clicked
+		#	if clicked == False:
+		#		self.beamPlayerUN.delete(0, END)
+		#		clicked = True
 
-	# Path to Python Telnet Script - USE "/" as separator even on Windows
-	PYSCRIPT_PATH = './telnet.py'
+		root = self
+		root.title("7Dtd Beam Interactive")
 
-	# 7 Days to Die Player Name
-	steam = steamid['GAME_PLAYERID']
+		self.mainframe = ttk.Frame(root, padding="3 3 12 12")
+		self.mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
+		self.mainframe.columnconfigure(0, weight=1)
+		self.mainframe.rowconfigure(0, weight=1)
 
-	os.system('python {} {} {} {}'.format(PYSCRIPT_PATH, server['host'], server['port'], server['password']))
+		conn = sqlite3.connect('test.sqlite')
+		cur = conn.cursor()
 
-	# Spawn Lists
-	# items = [ITEM, QUANTITY]
-	items = [
-		['gunPistol', 1],
-		['gunPumpShotgun', 1],
-		['gunSawedOffPumpShotgun', 1],
-		['gunAK47', 1],
-		['gun44Magnum', 1],
-		['gunHuntingRifle', 1],
-		['gunSniperRifle', 1],
-		['nailgun', 1],
-		['shotgunShell', 20],
-		['shotgunSlug', 20],
-		['10mmBullet', 20],
-		['9mmBullet', 20],
-		['762mmBullet', 20],
-		['44MagBullet', 20],
-		['miningHelmet', 1]
-	]
+		# print("Opened database successfully")
 
-	enemies = [
-		'zombieSteve',
-		'zombieBoe',
-		'zombieMoe',
-		'zombieJoe',
-		'zombieArlene',
-		'zombieDarlene',
-		'zombieMarlene',
-		'zombieSteveCrawler',
-		'animalBear'
-	]
+		cur.execute('''CREATE TABLE IF NOT EXISTS beam
+			(ID INTEGER PRIMARY KEY   AUTOINCREMENT,
+			username TEXT NOT NULL,
+			password TEXT NOT NULL);''')
 
-	friends = [
-		'animalRabbit',
-		'animalChicken',
-		'animalStag',
-		'animalPig'
-	]
+		# print("Table created successfully")
 
-	# Random range of numbers
-	num = random.randrange(0, 100)
+		cur.execute('''CREATE TABLE IF NOT EXISTS server
+			(ID INTEGER PRIMARY KEY   AUTOINCREMENT,
+			username TEXT NOT NULL,
+			host TEXT NOT NULL,
+			port INTEGER NOT NULL,
+			password TEXT NOT NULL);''')
 
-	###################################################################################
-	# ##########################   NO EDIT BELOW THIS LINE   ######################## #
-	###################################################################################
+		# print("Table created successfully")
 
-	loop = asyncio.get_event_loop()
+		cur.execute("SELECT count(*) FROM beam")
+		beam = cur.fetchone()[0]
 
+		cur.execute("SELECT count(*) FROM server")
+		server = cur.fetchone()[0]
 
-	class AuthenticationException(Exception):
-		def __init__(self, value):
-			self.parameter = value
+		if beam == 0 or server == 0:
+			self.beamPlayerUN = ttk.Entry(self.mainframe)
+			self.beamPlayerUN.grid(column=1, row=2, sticky=(W, E))
 
-		def __str__(self):
-			return repr(self.parameter)
+			self.beamPlayerPW = ttk.Entry(self.mainframe, show='*')
+			self.beamPlayerPW.grid(column=1, row=3, sticky=(W, E))
 
+			self.telnetAdd = ttk.Entry(self.mainframe)
+			self.telnetAdd.grid(column=1, row=5, sticky=(W, E))
 
-	class Beam:
-		@staticmethod
-		def get_tetris(session, channel):
-			"""
-			:param session:
-			:param channel:
-			:return:
-			"""
-			"""Retrieve interactive connection information."""
-			return session.get(path + "/tetris/{id}/robot".format(id=channel)).json()
+			self.telnetPt = ttk.Entry(self.mainframe)
+			self.telnetPt.grid(column=1, row=6, sticky=(W, E))
 
-		@staticmethod
-		def go_interactive(session, channel_id, version, code):
-			interactiveDetails = dict(tetrisGameId=version, tetrisShareCode=code, interactive=1)
-			return session.put(path + "/channels/{id}".format(id=channel_id), interactiveDetails).json()
+			ttk.Label(self.mainframe, text="Password").grid(column=2, row=7, sticky=W)
+			self.telnetPW = ttk.Entry(self.mainframe, show='*')
+			self.telnetPW.grid(column=1, row=7, sticky=(W, E))
 
-		@staticmethod
-		def on_handshake():
-			print("Shaking hands\n")
+			self.steamID = ttk.Entry(self.mainframe)
+			self.steamID.grid(column=1, row=9, sticky=(W, E))
 
-		@staticmethod
-		def on_handshake_ack(decoded):
-			decoded
-			print("Shaken hands\n")
+			self.button = ttk.Button(self.mainframe, text="Start Interactive", command=self.on_button_db).grid(columnspan=2, row=10, sticky=W)
 
-		@staticmethod
-		def on_error(error):
-			"""
-			:param error:
-			:return:
-			"""
-			"""This is called when we get an Error packet. It contains
-			a single attribute, 'message'.
-			"""
-			print('Oh no, there was an error!\n')
-			print(error.message)
+		else:
+			cur.execute("SELECT * FROM beam")
+			beamplayervalue = cur.fetchall()[0]
+			beamplayerunvalue = beamplayervalue[1]
+			beamplayerpwvalue = beamplayervalue[2]
 
-		@staticmethod
-		def login(session, username, password):
-			"""
-			:param session:
-			:param username:
-			:param password:
-			:return:
-			"""
-			"""Log into the Beam servers via the API."""
-			user = dict(username=username, password=password)
-			return session.post(path + "/users/login", user).json()
+			self.beamPlayerUN = ttk.Entry(self.mainframe)
+			self.beamPlayerUN.insert(0, beamplayerunvalue)
+			self.beamPlayerUN.grid(column=1, row=2, sticky=(W, E))
 
-		@staticmethod
-		def on_report(report):
+			self.beamPlayerPW = ttk.Entry(self.mainframe, show='*')
+			self.beamPlayerPW.insert(0, beamplayerpwvalue)
+			self.beamPlayerPW.grid(column=1, row=3, sticky=(W, E))
 
-			# Example of how to parse the reports
-			for tactile in report.tactile:
+			cur.execute("SELECT * FROM server")
+			servervalues = cur.fetchall()[0]
+			serverunvalue = servervalues[1]
+			serverhtvalue = servervalues[2]
+			serverptvalue = servervalues[3]
+			serverpwvalue = servervalues[4]
 
-				# Spawn Animal
-				if tactile.pressFrequency > 0 and tactile.id == 0:
-					key = random.randrange(0, len(friends))
-					os.system('python {} 3 spawnentity {} {}'.format(PYSCRIPT_PATH, steam, friends[key]))
+			self.telnetAdd = ttk.Entry(self.mainframe)
+			self.telnetAdd.insert(0, serverhtvalue)
+			self.telnetAdd.grid(column=1, row=5, sticky=(W, E))
 
-				# Spawn Enemy
-				elif tactile.pressFrequency > 0 and tactile.id == 1:
-					key = random.randrange(0, len(enemies))
-					if num == 73:
-						os.system('python {} 2 spawnwanderinghorde'.format(PYSCRIPT_PATH))
-					else:
-						os.system('python {} 2 spawnentity {} {}'.format(PYSCRIPT_PATH, steam, enemies[key]))
+			self.telnetPt = ttk.Entry(self.mainframe)
+			self.telnetPt.insert(0, serverptvalue)
+			self.telnetPt.grid(column=1, row=6, sticky=(W, E))
 
-				# Spawn Item
-				elif tactile.pressFrequency > 0 and tactile.id == 2:
-					key = random.randrange(0, len(items))
-					if num == 73:
-						os.system('python {} 1 spawnairdrop'.format(PYSCRIPT_PATH))
-					else:
-						os.system('python {} 4 give {} {} {}'.format(PYSCRIPT_PATH, steam, items[key][0], items[key][1]))
+			self.telnetPW = ttk.Entry(self.mainframe, show='*')
+			self.telnetPW.insert(0, serverpwvalue)
+			self.telnetPW.grid(column=1, row=7, sticky=(W, E))
 
-				# Spawn Horde
-				elif tactile.pressFrequency > 0 and tactile.id == 3:
-					os.system('python {} 2 spawnwanderinghorde'.format(PYSCRIPT_PATH))
+			self.steamID = ttk.Entry(self.mainframe)
+			self.steamID.insert(0, serverunvalue)
+			self.steamID.grid(column=1, row=9, sticky=(W, E))
 
-				# Spawn Feral
-				elif tactile.pressFrequency > 0 and tactile.id == 4:
-					os.system('python {} 2 spawnentity {} zombieFeral'.format(PYSCRIPT_PATH, steam))
+			self.button = ttk.Button(self.mainframe, text="Start Interactive", command=self.on_button).grid(columnspan=2, row=10, sticky=W)
 
-				elif tactile.pressFrequency > 0 and tactile.id == 5:
-					os.system('python {} 2 spawnentity {} zombieScreamer'.format(PYSCRIPT_PATH, steam))
+		# Beam Interactive Info
+		ttk.Label(self.mainframe, text="BEAM INTERACTIVE LOGIN INFO:").grid(columnspan=3, row=1, sticky=W)
+		ttk.Label(self.mainframe, text="Username").grid(column=2, row=2, sticky=W)
+		ttk.Label(self.mainframe, text="Password").grid(column=2, row=3, sticky=W)
 
-				# Spawn Airdrop
-				elif tactile.pressFrequency > 0 and tactile.id == 6:
-					os.system('python {} 1 spawnairdrop'.format(PYSCRIPT_PATH))
+		# Game Server Info
+		ttk.Label(self.mainframe, text="7DTD SERVER TELNET INFO:").grid(columnspan=3, row=4, sticky=W)
+		ttk.Label(self.mainframe, text="Address").grid(column=2, row=5, sticky=W)
+		ttk.Label(self.mainframe, text="Port").grid(column=2, row=6, sticky=W)
+		ttk.Label(self.mainframe, text="Password").grid(column=2, row=7, sticky=W)
 
-		@asyncio.coroutine
-		def connect(self, user):
-			session = requests.Session()
-			channel_data = Beam().login(session, **user)
+		# 7dtd Player Info
+		ttk.Label(self.mainframe, text="7DTD PLAYER INFO:").grid(columnspan=3, row=8, sticky=W)
 
-			if "channel" not in channel_data:
-				raise AuthenticationException("Incorrect username or password\n")
+		ttk.Label(self.mainframe, text="Steam ID").grid(column=2, row=9, sticky=W)
 
-			channel_id = channel_data["channel"]["id"]
-			data = Beam().get_tetris(session, channel_id)
-			# interactiveData = Beam().go_interactive(session, channel_id, game_version, share_code)
-			conn = yield from start(data['address'], channel_id, data['key'], loop)
-			print("Using channel ID: ", channel_id, "\n")
+		for child in self.mainframe.winfo_children():
+			child.grid_configure(padx=5, pady=5)
 
-			# Handlers definitions
-			handlers = {
-				proto.id.error: Beam().on_error,
-				proto.id.report: Beam().on_report,
-				proto.id.handshake: Beam().on_handshake,
-				proto.id.handshake_ack: Beam().on_handshake_ack
-			}
+		self.beamPlayerUN.focus()
+		self.bind('<Return>', self.on_button)
 
-			# Actual parsing of the received packet
-			while (yield from conn.wait_message()):
-				decoded, packet_bytes = conn.get_packet()
-				packet_id = proto.id.get_packet_id(decoded)
-				if decoded is None:
-					print('We got a bunch of unknown bytes.')
-				elif packet_id in handlers:
-					handlers[packet_id](decoded)
-				else:
-					print("We got packet {} but didn't handle it!".format(packet_id))
-					print("Closing\n")
-					conn.close()
+	def on_button(self):
+		server = dict(host='', port='', username='', password='')
+		server["host"] = self.telnetAdd.get()
+		server['port'] = self.telnetPt.get()
+		server['password'] = self.telnetPW.get()
 
-	# Create another object like this to add another player
-	player = Beam()
+		streamer = dict(username='', password='')
+		streamer["username"] = self.beamPlayerUN.get()
+		streamer['password'] = self.beamPlayerPW.get()
 
-	try:
-		# Do a new line similar to this line but with objects for the new player
-		asyncio.ensure_future(player.connect(streamer))
-		loop.run_forever()
-	except KeyboardInterrupt:
-		print("Disconnected.")
-	finally:
-		loop.close()
+		steamid = dict(playerid='')
+		steamid['playerid'] = self.steamID.get()
+
+		print(steamid['playerid'])
+
+		conn = sqlite3.connect('test.sqlite')
+		cur = conn.cursor()
+
+		cur.execute('''UPDATE beam SET username = ?, password = ? WHERE ID = 1''', (streamer['username'], streamer['password']))
+		cur.execute('''UPDATE server SET username = ?, host = ?, port = ?, password = ? WHERE ID = 1''', (steamid['playerid'], server['host'], server['port'], server['password']))
+
+		conn.commit()
+		print("Records created successfully")
+		conn.close()
+
+		# interactive.test(streamer, steamid, server)
+
+	def on_button_db(self):
+		server = dict(host='', port='', username='', password='')
+		server["host"] = self.telnetAdd.get()
+		server['port'] = self.telnetPt.get()
+		server['password'] = self.telnetPW.get()
+
+		streamer = dict(username='', password='')
+		streamer["username"] = self.beamPlayerUN.get()
+		streamer['password'] = self.beamPlayerPW.get()
+
+		steamid = dict(playerid='')
+		steamid['playerid'] = self.steamID.get()
+
+		print(steamid['playerid'])
+
+		conn = sqlite3.connect('test.sqlite')
+		cur = conn.cursor()
+
+		cur.execute('''INSERT INTO beam (username, password) VALUES(?, ?);''', (streamer['username'], streamer['password']))
+		cur.execute('''INSERT INTO server (username, host, port, password) VALUES(?, ?, ?, ?);''', (steamid['playerid'], server['host'], server['port'], server['password']))
+
+		conn.commit()
+		print("Records created successfully")
+		conn.close()
+
+		# interactive.test(streamer, steamid, server)
+
+app = InteractiveApp()
+app.mainloop()
