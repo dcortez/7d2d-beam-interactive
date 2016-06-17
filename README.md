@@ -36,10 +36,8 @@ _If you get module errors when trying to run_
 
 5. Open cmd(windows) or terminal(linux/unix)
    * Install module modules you are missing
-         * pip3 install <module> _(window/linux/unix)_
-            * _If if it warns about pip being outdated update it_
-            * _You may have to do this for multiple modules_
-            * _Modules Used_
+         * pip3 install <module> _(window/linux/unix)_ _If if it warns about pip being outdated update it_
+         * **MODULES USED**
             * websocket
             * _thread
             * time
