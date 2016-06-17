@@ -80,3 +80,5 @@ _Below are the commands that are in the scottyint.py file. You can name your com
 	
 4. !horde
 	* Spawns a wandering horde
+
+### MORE TO COME....
