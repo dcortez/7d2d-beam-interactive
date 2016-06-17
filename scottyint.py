@@ -21,9 +21,31 @@ server = {
 	'username': <'PLAYER_NAME'>
 }
 
-
 # Path to Python Telnet Script - USE "/" as separator even on Windows
 pyscript_path = './telnet.py'
+
+# Random range of numbers
+num = random.randrange(0, 100)
+amt = random.randrange(0, 20)
+
+# These can be changed but must match the commands you put in scottybot
+commands = [
+	'!item',
+	'!health',
+	'!food',
+	'!animal',
+	'!quest',
+	'!airdrop',
+	'!weapon',
+	'!enemy',
+	'!feral',
+	'!screamer',
+	'!horde'
+]
+
+###################################################################################
+# ##########################   NO EDIT BELOW THIS LINE   ######################## #
+###################################################################################
 
 # 7 Days to Die Player Name
 steam = server['username']
@@ -57,15 +79,6 @@ buffs = items.items['buffs']
 debuffs = items.items['debuffs']
 zombies = items.items['zombies']
 animals = items.items['animals']
-
-# Random range of numbers
-num = random.randrange(0, 100)
-amt = random.randrange(0, 20)
-
-###################################################################################
-# ##########################   NO EDIT BELOW THIS LINE   ######################## #
-###################################################################################
-
 
 def on_message(ws, message):
 	response = json.loads(message)
