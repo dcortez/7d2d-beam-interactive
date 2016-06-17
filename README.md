@@ -41,4 +41,5 @@ _If you get module errors when trying to run_
             * _You may have to do this for multiple modules_
 
 ## You have to add the following commands and costs to Scotty Bot. _(costs are up to you)_
-_You can name your commands whatever you want in Scotty Bot, but you will have to go into scottyint.py and manually change them to match_
+_Below are the commands that are in the scottyint.py file_
+_You can name your commands whatever you want in Scotty Bot, but you will have to go into scottyint.py and manually change them to match._
