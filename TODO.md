@@ -1,6 +1,6 @@
 #List of Things to do:
 
-- [ ]Implement GUI
+- [ ] Implement GUI
   * (tkinter) for entering credentials and starting the interactive app.
 
 - [ ] Implement DB
