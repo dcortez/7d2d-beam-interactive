@@ -46,7 +46,7 @@ _If you get module errors when trying to run_
             * os
             * random
             * telnetlib
-            * telnetlib
+            * re
 	
 
 ## You have to add the following commands and costs to Scotty Bot. _(costs are up to you)_
