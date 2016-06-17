@@ -75,6 +75,14 @@ _Below are the commands that are in the scottyint.py file. You can name your com
 7. !weapon
     * Spawns a RANDOM weapon _(ammunition also included)_
 
+8. !explosives
+	* Spawns a RANDOM explosive item
+
+9. !clothes
+	* Spawns a RANDOM piece of clothing
+	
+10. !tool
+	* Spawns a RANDOM tool
 
 ## _Harmful Items_
 
