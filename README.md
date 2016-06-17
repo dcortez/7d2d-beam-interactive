@@ -40,5 +40,5 @@ _If you get module errors when trying to run_
             * _If if it warns about pip being outdated update it_
             * _You may have to do this for multiple modules_
 
-## You have to add the commands and costs to Scotty Bot. Below will be a list of commands that need to be added.
+## You have to add the following commands and costs to Scotty Bot. _(costs are up to you)_
 _You can name your commands whatever you want in Scotty Bot, but you will have to go into scottyint.py and manually change them to match_
