@@ -42,3 +42,41 @@ _If you get module errors when trying to run_
 
 ## You have to add the following commands and costs to Scotty Bot. _(costs are up to you)_
 _Below are the commands that are in the scottyint.py file. You can name your commands whatever you want in Scotty Bot, but you will have to manually change them to match in the scottyint.py file._
+
+_Helpful Items_
+
+1. !item
+    * Spawns a RANDOM item from every spawanable item in the game
+
+2. !health
+    * Spawns a RANDOM Health item
+    
+3. !food
+    * Spawns a RANDOM food item
+
+4. !animal
+    * Spawns a RANDOM animal _(except bears)_
+
+5. !quest
+	* Spawns a RANDOM quest
+	
+6.!airdrop
+    * Spawns an airdrop
+
+7. !weapon
+    * Spawns a RANDOM weapon _(ammunition also included)_
+
+
+_Harmful Items_
+
+1. !enemy 
+    * Spawns a RANDOM zombie _(including hornets, dogs, bears, and zombie bears)_
+
+2. !feral
+    * Spawns a feral
+    
+3. !screamer
+	* Spawns a screamer
+	
+4. !horde
+	* Spawns a wandering horde
