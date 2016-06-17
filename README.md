@@ -3,11 +3,6 @@
 
 _This was created to give streamers a little more control than using the Beam Interactive. With Beam Interactive you are using Sparks to interact with the streamer. If something goes wrong the streamer has no way of refunding Sparks. Sparks are only gained by watching streams and takes a while to get a decent amount. Most streamers dont want to be trolled so bad that they cant enjoy the game and will set their interactions at a high spark cost. This will disscourage the viewer from interacting. With ScottyBot integration the streamer has full control over the costs and viewers can earn points easier and in more ways than they can with Sparks._
 
-## You have to add the commands and costs to Scotty Bot. Below will be a list of commands that need to be added.
-_You can name your commands whatever you want in Scotty Bot, but you will have to go into scottyint.py and manually change them to match_
-
-
-
 ### CAVEATS
     NOTE: YOU MUST HAVE A DEDICATED SERVER WITH TELNET ENABLED, THIS WILL NOT CONNECT TO GAME CLIENT!
         
@@ -44,3 +39,6 @@ _If you get module errors when trying to run_
          * pip3 install <module> _(window/linux/unix)_
             * _If if it warns about pip being outdated update it_
             * _You may have to do this for multiple modules_
+
+## You have to add the commands and costs to Scotty Bot. Below will be a list of commands that need to be added.
+_You can name your commands whatever you want in Scotty Bot, but you will have to go into scottyint.py and manually change them to match_
