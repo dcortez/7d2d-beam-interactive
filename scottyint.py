@@ -1,3 +1,51 @@
+import websocket
+import _thread as thread
+import time
+import sys
+import json
+import os
+import random
+import items
+
+
+# Scottybot auth info
+auth = {
+	"event": "auth",
+	"data": <"SCOTTYBOT_AUTH_CODE">
+}
+
+server = {
+	'host': <'TELNET_HOST'>
+	'port': <'PORT'>,
+	'password': <'PASSWORD'>,
+	'username': <'PLAYER_NAME'>
+}
+
+# Path to Python Telnet Script - USE "/" as separator even on Windows
+pyscript_path = './telnet.py'
+
+# Random range of numbers
+# less chance of an air drop whe using !item
+num = random.randrange(0, 100)
+
+# These can be changed but must match the commands you put in scottybot
+commands = [
+	'!item',
+	'!tool',
+	'!clothes',
+	'!health',
+	'!food',
+	'!animal',
+	'!quest',
+	'!airdrop',
+	'!weapon',
+	'explosives',
+	'!enemy',
+	'!feral',
+	'!screamer',
+	'!horde'
+]
+
 ###################################################################################
 # ##########################   NO EDIT BELOW THIS LINE   ######################## #
 ###################################################################################
