@@ -9,7 +9,6 @@
         <property name="TelnetPassword" value="<TELNET_PASSWORD>"/>
         <property name="TelnetPort" value="<TELNET_PORT>"/>
         <property name="TelnetEnabled" value="true"/>
-        
 
 _These instructions have been tested and work on Windows/Linux/mac_
 
