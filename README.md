@@ -60,7 +60,7 @@ _Helpful Items_
 5. !quest
 	* Spawns a RANDOM quest
 	
-6.!airdrop
+6. !airdrop
     * Spawns an airdrop
 
 7. !weapon
