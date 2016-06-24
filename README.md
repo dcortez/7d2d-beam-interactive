@@ -40,6 +40,7 @@ _If you get module errors when trying to run_
          		* If using pip with linux you must use run as root so and do the following
          			* sudo apt-get install python3-dev
 				* sudo pip3 install <module>
+
          *If you are getting a websocket module missing error
 		* sudo ap-get --reinstall install python-websocket _(linux/unix)_ _(just in case)_
 		* sudo ap-get --reinstall install python3-websocket _(linux/unix)_
