@@ -41,9 +41,9 @@ _If you get module errors when trying to run_
          				* sudo apt-get install python3-dev
          				* sudo pip3 install <module>
 
-         	*If you are getting a websocket module missing error
-			* sudo ap-get --reinstall install python-websocket _(linux/unix)_ _(just in case)_
-			* sudo ap-get --reinstall install python3-websocket _(linux/unix)_
+         	* If you are getting a websocket module missing error
+         		* sudo ap-get --reinstall install python-websocket _(linux/unix)_ _(just in case)_
+         		* sudo ap-get --reinstall install python3-websocket _(linux/unix)_
 	
 ## You have to add the following commands and costs to Scotty Bot. _(costs are up to you)_
 _Below are the commands that are in the scottyint.py file. You can name your commands whatever you want in Scotty Bot, but you will have to manually change them to match in the scottyint.py file. I will make it more smarter later so you will be able to use whatever command you want and not change the scottybotint.py file.... (yes I said more smarter! LMAO)_
