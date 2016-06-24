@@ -37,9 +37,9 @@ _If you get module errors when trying to run_
          * pip3 install websocket _(window)_ _If if it warns about pip being outdated update it_
          * sudo ap-get install python3-websocket _(linux/unix)_
          	* linux pip3 uses gcc to compile the modules and gcc looks for a valid Python.h header, which on many Unbuntu/Debian based systems very well may fail as it will look for a Python V2 header that it may or may not find and may or may not be a version mismatch. _(Thanks Bobofett for this knowledge)_ 
-         		* If using pip with linux you must use run as root so and do the following
+         		* If using pip with linux you must use run as root and do the following
          			* sudo apt-get install python3-dev
-				* sudo pip3 install <module>
+         			* sudo pip3 install <module>
 
          *If you are getting a websocket module missing error
 		* sudo ap-get --reinstall install python-websocket _(linux/unix)_ _(just in case)_
