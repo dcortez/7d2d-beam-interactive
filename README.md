@@ -31,7 +31,7 @@ _These instructions have been tested and work on Windows/Linux/mac_
       * python3 scottyint.py _(linux/unix)_
 
 _While the interactive is running you will see in terminal a bunch of lines that look like:  
-send: b'\x81\xaa\xbc-\x19\xcf\xc7\x0f}\xae\xc8L;\xf5\x9c\x0fz\xa0\xd1@x\xa1\xd8^;\xe3\x9c\x0f|\xb9\xd9Cm\xed\x86\r;\xbc\xc9Oj\xac\xceD{\xaa\x9eP' 
+send: b'\x81\xaa\xbc-\x19\xcf\xc7\x0f}\xae\xc8L;\xf5\x9c\x0fz\xa0\xd1@x\xa1\xd8^;\xe3\x9c\x0f|\xb9\xd9Cm\xed'   
 This is completely normal. It is the ping going to the scottybot to keep it alive. If you do not want to see this comment out line 199. You can do this by changing the line to # websocket.enableTrace(True)_
 
 _To close out the interactive ctrl + c or hit the x int the right hand cornor of the terminal window_
