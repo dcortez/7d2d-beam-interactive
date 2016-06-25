@@ -35,16 +35,9 @@ _If you get module errors when trying to run_
 5. Open cmd(windows) or terminal(linux/unix)
 	* Install websocket module
 		* pip3 install websocket _(windows)_ _(If if it warns about pip being outdated update it)_
-		* sudo ap-get install python3-websocket _(linux/unix)_
+		* sudo pip3 install websocket-client _(linux/unix)_
  			* linux pip3 uses gcc to compile the modules and gcc looks for a valid Python.h header, which on many Unbuntu/Debian based systems very well may fail as it will look for a Python V2 header that it may or may not find and may or may not be a version mismatch. _(Thanks Bobofett for this knowledge)_
- 				* If using pip with linux you must use run as root and do the following
- 					* sudo apt-get install python3-dev
- 					* sudo pip3 install <module>
-
-         	* If you are still getting a websocket module missing error
-         		* sudo ap-get --reinstall install python-websocket _(linux/unix)_ _(just in case)_
-         		* sudo ap-get --reinstall install python3-websocket _(linux/unix)_
-	
+ 			
 ## You have to add the following commands and costs to Scotty Bot. _(costs are up to you)_
 _Below are the commands that are in the scottyint.py file. You can name your commands whatever you want in Scotty Bot, but you will have to manually change them to match in the scottyint.py file. I will make it more smarter later so you will be able to use whatever command you want and not change the scottybotint.py file.... (yes I said more smarter! LMAO)_
 
