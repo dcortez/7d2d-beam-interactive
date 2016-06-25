@@ -30,6 +30,8 @@ _These instructions have been tested and work on Windows/Linux/mac_
       * py -3 scottyint.py _(windows)_
       * python3 scottyint.py _(linux/unix)_
 
+_While the interactive is running you will see in terminal a bunch of lines that look like 
+
 _If you get module errors when trying to run_
 
 5. Open cmd(windows) or terminal(linux/unix)
