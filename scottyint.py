@@ -11,14 +11,14 @@ import items
 # Scottybot auth info
 auth = {
 	"event": "auth",
-	"data": <"SCOTTYBOT_AUTH_CODE">
+	"data": "<SCOTTYBOT_AUTH_CODE>"
 }
 
 server = {
-	'host': <'TELNET_HOST'>
-	'port': <'PORT'>,
-	'password': <'PASSWORD'>,
-	'username': <'PLAYER_NAME'>
+	'host': '<TELNET_HOST>',
+	'port': '<PORT>',
+	'password': '<PASSWORD>',
+	'username': '<PLAYER_NAME>'
 }
 
 # Path to Python Telnet Script - USE "/" as separator even on Windows
